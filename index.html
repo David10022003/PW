@@ -8,26 +8,38 @@
 </head>
 <body>
   <!--Carrusel-->
-  <section class="primera-seccion">
-      <div class="contenedor">
-        <div class="contenido">
-          <div class="caja web">
-            <img src="images/Deconstructed-robot-bro.svg" alt="">
-            <div class="contentBx">
-              <div id="title">
-                <h2 id="titulo"></h2>
-              </div>                   
-            </div>
-            <div class="btn"> 
-              <button  onclick="window.location='#blur'">Read more </button>                             
-            </div>
-          </div>
+  <section id="carrusel">
+    <div class="contenedor">
+      <div class="texto-carousel">
+        <div class="contentBx">
+            <h2>Implementación de la inteligencia artificial para elaborar <span><span id="texto-codigo"></span></span></h2>
+            <p></p>
+            <a href="#tarjetas"><span>Leer más</span></a>
+        </div>
+        <div class="fondo-robot">
+          <img src="images/Innovation-pana.svg" alt="">
         </div>
       </div>
-  </section>
+        <div class="tabs">
+            <input id="web" type="radio" name="slider" checked="">
+            <input id="graphics" type="radio" name="slider">
+            <input id="photography" type="radio" name="slider">
+        
+            <div class="buttons">
+                <label for="web"></label>
+                <label for="graphics"></label>
+                <label for="photography"></label>
+            </div>
+            <div class="content-carousel">
+               
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
 
   <!--Tarjetas-->
-  <section id="blur" class="segunda-seccion">
+  <section id="tarjetas">
     <div class="container">
       <div class="card">
         <div class="box">
@@ -216,7 +228,7 @@
       <div id = "bibliografia" class="ventana">
         <div class="ventana-interna">
           <img src="images/close-icon.svg" onclick="toggle('bibliografia')" class="close" alt="">
-          <div class="ventana-contenido">
+          <div class="ventana-contenido enlaces">
             <h2>Bibliografia</h2>
             <img src="imagenes/bibliografia.jpeg" alt="">
             <p>Abudinen, K. (2020). Colombia podría alcanzar un déficit de 112.000 programadores en 2025. Elempleo. 
@@ -239,7 +251,7 @@
       </div>
   <!--Footer-->
       <footer>
-        <div class="waves">
+        <div class="waves" id="footer">
           <div class="wave" id="wave1"></div>
           <div class="wave" id="wave2"></div>
           <div class="wave" id="wave3"></div>
@@ -266,5 +278,16 @@
         
       </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+      let typingText = new Typed("#texto-codigo",{
+      strings : ["código."],
+      loop : true,
+      /*showCursor: false,*/
+      typeSpeed : 100,
+      backSpeed : 100,
+      backDelay : 400,
+      })
+    </script>
 </body>
 </html>

@@ -1,3 +1,136 @@
+@font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-Bold.otf') format('opentype');
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-ExtraBold.otf') format('opentype');
+   font-weight: 800;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-ExtraLight.otf') format('opentype');
+   font-weight: 200;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-Light.otf') format('opentype');
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-Black.otf') format('opentype');
+   font-weight: 900;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-Medium.otf') format('opentype');
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-Thin.otf') format('opentype');
+   font-weight: 100;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-SemiBold.otf') format('opentype');
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-Thin.otf') format('opentype');
+   font-weight: 100;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-SemiBold.otf') format('opentype');
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-Light.otf') format('opentype');
+   font-weight: 300;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-ExtraBold.otf') format('opentype');
+   font-weight: 800;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-Bold.otf') format('opentype');
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-Medium.otf') format('opentype');
+   font-weight: 500;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-ExtraLight.otf') format('opentype');
+   font-weight: 200;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-Black.otf') format('opentype');
+   font-weight: 900;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter Display';
+   src: url('fonts/InterDisplay-Regular.otf') format('opentype');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+ }
+ @font-face {
+   font-family: 'Inter';
+   src: url('fonts/Inter-Regular.otf') format('opentype');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+ }
+
+ 
+
+*{
+   scroll-behavior: smooth;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -18,89 +151,293 @@ section{
   
  
 
-/*Inicio*/
+/*Carrusel*/
   
- .contenedor{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    overflow: hidden;
- }
- .contenido{
-   background-color: #fff;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    display: flex;
-    transition: 2s;
- }
- .contenido .caja{
-    position: relative;
-    width: 80%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    user-select: none;
- }
-
- .contenido .caja img{
-   position: absolute;
-   max-height: 100%;
-   opacity: 0.3;
- }
-
- .contentenido .caja .contentBx{
-    display: flex;
-    width: 70%;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    
+.carousel {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
  }
  
- .contenido .caja .contentBx h2{
-    font-size: 4em;
-    min-width: 100px;
-    min-height: 100px;
-    color: #000;
-    text-align: center;
-    -webkit-text-stroke: 0.3vw #000;
-    text-transform: uppercase;
+ .slide {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   transition: opacity 1s ease-in-out;
  }
-
- .btn{
-   width: max-content;
-   height: max-content;
-   z-index: 1;
+ 
+ .active-slide {
+   opacity: 1;
  }
-  .contenido .caja button{
-    font-size: 1.2em;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 15px 35px;
-    background: #fff;
-    color: #333;
-    letter-spacing: 0.05em;
-    font-weight: 600;
-    border: 1px solid #333;
-    border-radius: 40px;
-    transition: 0.5s;
-
-
+ 
+ .slide img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
  }
-
-.contenedor .contenido .caja button:hover{
-   letter-spacing: 8px;
+ 
+ .caption {
+   position: absolute;
+   bottom: 20px;
+   left: 20px;
+   color: #fff;
+   font-size: 24px;
+ }
+ 
+ /* Estilos para los botones de navegación del carrusel */
+ 
+.contenedor{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   background: #fff;
+   overflow: hidden;
 }
 
- .contenedor .contenido .caja button{
-   cursor: pointer;
+.contenedor .texto-carousel{
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      user-select: none;
+      z-index: 3;
+}
+
+.contenedor .texto-carousel .contentBx{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+   padding: 5%;
+   width: 50%;
+}
+
+.contenedor .texto-carousel .fondo-robot{
+   position: absolute;
+   background-image: url(imagenes/colors.png);
+   width: 40%;
+   min-height: 100vh;
+   transform: translateX(150%);
  }
+
+.contenedor .texto-carousel .fondo-robot img{
+   animation: animateRobot 4s ease-in-out infinite;
+ }
+
+ @keyframes animateRobot {
+   0%{
+      transform: translateY(5%);
+   }
+   50%{
+      transform: translateY(20%);
+   }
+
+   100%{
+      transform: translateY(5%);
+   }
+   
+ }
+ 
+.contenedor .texto-carousel .contentBx h2{
+    margin: 0;
+    font-size: 4em;
+    color: #111;
+    width: 100%;
+    font-family: 'Inter Display', sans-serif ;
+ }
+
+ .contenedor .texto-carousel .contentBx h2 span{
+   color: #6e48aa;
+}
+ 
+.contenedor .texto-carousel .contentBx p{
+    font-size: 1.2em;
+    margin: 0;
+    color: #fff;
+    max-width: 70%;
+    text-align: center;
+ }
+ 
+.contenedor .texto-carousel .contentBx a{
+   position: relative;
+   width: 300px;
+   height: 75px;
+   margin: 10px 0;
+   font-family: 'Inter Display';
+   font-size: 30px;
+   color: #000;
+   transform: translateX(50%);
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   transition: 0.5s;
+ }
+
+.contenedor .texto-carousel .contentBx a:hover{
+   color: #fff;
+}
+
+.contenedor .texto-carousel .contentBx a:before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: url(imagenes/btn-bg1.png);
+   background-size: cover;
+   transform-origin: left;
+   transition: 0.5s;
+}
+
+.contenedor .texto-carousel .contentBx a:hover:before{
+   width: 100%;
+}
+
+.contenedor .texto-carousel .contentBx a span{
+   position: relative;
+   z-index: 1;
+}
+ 
+.contenedor .texto-carousel .contentBx button:hover{
+    letter-spacing: 0.2em;
+    background-size: cover; 
+    transform-origin: left;
+    transition: 1s;
+    cursor: pointer;
+ }
+
+ .contenedor .texto-carousel .contentBx button:active{
+   animation-delay: 0.5s;
+ }
+
+.tabs input{
+   visibility: hidden;
+   display: none;
+}
+
+
+
+.buttons{
+   position: absolute;
+   bottom: 50px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 10px;
+   z-index: 2;
+}
+
+.buttons label{
+   width: 20px;
+   height: 20px;
+   background: #fff;
+   opacity: 0.5;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: 0.5s;
+}
+
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3)
+{
+   opacity: 1;
+   width: 50px;
+}
+
+.content-carousel{
+   position: relative;
+   width: 300%;
+   height: 100vh;
+   display: flex;
+   transition: 2s;
+}
+.content-carousel .box{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   user-select: none;
+}
+
+.content-carousel .box:nth-child(1){
+   background: linear-gradient(90deg, #43cea2, #185a9d);
+}
+.content-carousel .box:nth-child(2){
+   background: linear-gradient(90deg, #ff4e50, #f9d423);
+}
+.content-carousel .box:nth-child(3){
+   background: linear-gradient(90deg, #ae62cc, #6e48aa);
+}
+
+.tabs input:nth-child(1):checked ~ .content-carousel{
+   left: 0;
+}
+
+.tabs input:nth-child(2):checked ~ .content-carousel{
+   left: -100%;
+}
+
+.tabs input:nth-child(3):checked ~ .content-carousel{
+   left: -200%;
+}
+
+.content-carousel .box .contentBx{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.content-carousel .box .contentBx img{
+  height: 12em;
+  --img-stroke-width: 16px;
+}
+
+.content-carousel .box .contentBx h2{
+   margin: 0;
+   font-size: 3em;
+   color: #fff;
+}
+
+.content-carousel .box .contentBx p{
+   font-size: 1.2em;
+   margin: 0;
+   color: #fff;
+   max-width: 70%;
+   text-align: center;
+}
+
+.content-carousel .box .contentBx button{
+
+   font-size: 1.2em;
+   text-decoration: none;
+   text-transform: uppercase;
+   padding: 15px 35px;
+   background: #fff;
+   color: #333;
+   letter-spacing: 0.05em;
+   margin-top: 10px;
+   font-weight: 600;
+   border: none;
+   border-radius: 40px;
+   transition: 0.5s;
+}
+
+.content-carousel .box .contentBx button:hover{
+   letter-spacing: 0.2em;
+}
 
 
 /* Tarjetas*/  
@@ -207,16 +544,104 @@ section{
 
 /*Ventanas*/
 
-.ventana .ventana-interna .ventana-contenido a{
-   /*position: relative;
-   
-   display: inline-block;
-   
-   text-decoration: none;
-   color: #fff;
-   background: #111;*/
+
+
+.ventana
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-right: 35px;
+    background: rgba(255, 255, 255, .7);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    overflow: auto;
+}
+
+.ventana.active
+{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    z-index: 2000;
+}
+
+.ventana-interna{
    position: relative;
-   padding: 5px 15%;
+   display: flex;
+   transform: translateY(-100%);
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 15px;
+   width: calc(100%-80px);
+   height: max-content;
+   margin: 0px 40px 40px 40px;
+   padding: 40px;
+   background-color: #fff;
+   transition: 1s;
+   box-shadow: 2px 2px 200px 200px rgba(0,0,0,0.5);
+}
+
+.ventana.active .ventana-interna{
+   transform: translateY(1%);
+}
+
+.ventana-interna .close{
+   position:absolute;
+   top: 20px;
+   right: 20px;
+   width: 48px;
+   height: 48px;
+   cursor: pointer;
+   transition: 0.5s;
+}
+
+.ventana-interna .close:hover{
+   opacity: 0.5;
+   rotate: 180deg;
+}
+
+.ventana-interna .ventana-contenido{
+   width: 70%;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+.ventana-interna .enlaces{
+   word-wrap: break-word;
+}
+.ventana-interna .ventana-contenido h2{
+   color: #111;
+   font-size: 4em;
+   font-family: 'Inter Display';
+   word-break: break-all; 
+}
+
+.ventana-interna .ventana-contenido img{
+   width: 100%;
+   margin: 40px 0 40px 0;
+}
+
+.ventana-interna .ventana-contenido p{
+   text-align: justify;
+
+   color: #222;
+   font-size: 1.1em;
+   line-height: 1.5;
+}
+
+.ventana-interna .ventana-contenido li{
+   text-align: justify;
+   font-size: 1.1em;
+   line-height: 1.5;
+}
+
+.ventana .ventana-interna .ventana-contenido a{
+   position: relative;
+   padding: 1% 15%;
    text-align: center;
    color: #fff;
    font-size: 24px;
@@ -265,94 +690,6 @@ section{
 
 
 }
-
-.ventana
-{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    padding-right: 35px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, .90);
-    background: rgba(0, 0, 0, .5);
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
-    overflow: auto;
-}
-
-.ventana.active
-{
-    visibility: visible;
-    opacity: 1;
-    transition: 0.5s;
-    z-index: 2000;
-}
-
-.ventana-interna{
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   border-radius: 15px;
-   width: calc(100%-80px);
-   height: max-content;
-   margin: 40px 40px 40px 40px;
-   padding: 40px;
-   background-color: #ebf5fc;
-}
-
-.ventana-interna .close{
-   position:absolute;
-   top: 20px;
-   right: 20px;
-   width: 48px;
-   height: 48px;
-   cursor: pointer;
-   transition: 0.5s;
-}
-
-.ventana-interna .close:hover{
-   opacity: 0.5;
-   rotate: 180deg;
-}
-
-.ventana-interna .ventana-contenido{
-   width: 70%;
-   margin-left: auto;
-   margin-right: auto;
-   text-align: center;
-}
-
-.ventana-interna .ventana-contenido h2{
-   color: #333;
-   font-size: 3em;
-   font-weight: 700;
-}
-
-.ventana-interna .ventana-contenido img{
-   width: 100%;
-   margin: 40px 0 40px 0;
-}
-
-.ventana-interna .ventana-contenido p{
-   text-align: justify;
-   font-size: 1.1em;
-   line-height: 1.5;
-}
-
-.ventana-interna .ventana-contenido li{
-   text-align: justify;
-   font-size: 1.1em;
-   line-height: 1.5;
-}
-
-/*section#blur.active
-{
-    filter: blur(20px);
-    pointer-events: none;
-    user-select: none;
-}*/
 
 /*Footer*/
 footer{

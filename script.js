@@ -1,33 +1,31 @@
 /*Titulo*/
+const tabs = document.querySelectorAll('.tabs input');
+const content = document.querySelector('.content');
+const container = document.querySelectorAll('.container slider');
+let currentIndex = 0;
+let prevIndex = 0;
 
-const maquina3 = document.getElementById('titulo')
+function changeSlide(index) {
+  // Cambiar el índice actual y anterior
+  prevIndex = currentIndex;
+  currentIndex = index;
 
-const escribir = (text = '',tiempo = 200, etiqueta = '') => {
-  let arrayCaracteres = text.split('')
-  let i = 0
-  let j = text.length
-  let escribir = setInterval(function(){
-    if (i === arrayCaracteres.length) {
-      etiqueta.innerHTML = text.substring(0,j)
-      j--
-      if (j === 0) {
-        etiqueta.innerHTML = ''
-        i = 0
-        j = text.length
-      }
-    } else {
-      etiqueta.innerHTML += arrayCaracteres[i]
-      i++
-    }
-  }, tiempo)
+  // Actualizar la selección de pestañas y botones
+  tabs[prevIndex].checked = false;
+  tabs[currentIndex].checked = true;
+
+  // Animar el desplazamiento del carrusel
+  container.changeSlide;
 }
 
-escribir("Implementación de la inteligencia artificial para elaborar código",150, titulo)
-
+setInterval(() => {
+  // Cambiar al siguiente índice
+  changeSlide((currentIndex + 1) % tabs.length);
+}, 5000);
 /*Tarjetas*/
 
   function toggle(clase){
-    var blur = document.getElementById('blur');
+    var blur = document.getElementById('tarjetas');
     blur.classList.toggle('active')
     var popup = document.getElementById(clase);
     popup.classList.toggle('active')
