@@ -815,9 +815,14 @@ footer .container .centro li{
 }
 
 @media screen and (max-width: 479px){
-   .contenedor .texto-carousel .contentBx h2{
+   .contenedor .texto-carousel .contentBx h2,
+   .ventana-interna .ventana-contenido h2{
       font-size: 1.875em;
       letter-spacing: -0.01em;
+   }
+
+   .ventana-interna .ventana-contenido{
+      width: 85%;
    }
 
    .contenedor .texto-carousel{
