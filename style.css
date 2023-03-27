@@ -219,11 +219,12 @@ section{
 }
 
 .contenedor .texto-carousel .fondo-robot{
-   position: absolute;
+   /*position: absolute;*/
    background-image: url(imagenes/colors.png);
    width: 40%;
-   min-height: 100vh;
-   transform: translateX(150%);
+   background-size: cover;
+   /*min-height: 100vh;*/
+   /*transform: translateX(150%);*/
  }
 
 .contenedor .texto-carousel .fondo-robot img{
@@ -232,14 +233,14 @@ section{
 
  @keyframes animateRobot {
    0%{
-      transform: translateY(5%);
+      transform: translateY(-10%);
    }
    50%{
-      transform: translateY(20%);
+      transform: translateY(5%);
    }
 
    100%{
-      transform: translateY(5%);
+      transform: translateY(-10%);
    }
    
  }
@@ -797,4 +798,45 @@ footer .container .centro .imgLogo img{
 footer .container .centro li{
    list-style: none;
    font-size: 1.5em;
+}
+
+
+@media screen and (max-width: 991px) {
+   .contenedor .texto-carousel .contentBx h2{
+      font-size: 3.25em;
+   }
+
+   .contenedor .texto-carousel .contentBx a{
+      transform: translateX(0%);
+      background-image: url(imagenes/btn-bg1.png);
+      background-size: contain;
+      color: #fff;
+   }
+}
+
+@media screen and (max-width: 479px){
+   .contenedor .texto-carousel .contentBx h2{
+      font-size: 1.875em;
+      letter-spacing: -0.01em;
+   }
+
+   .contenedor .texto-carousel{
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   .contenedor .texto-carousel .contentBx{
+      width: 70%;
+   }
+
+   .contenedor .texto-carousel .contentBx a{
+      transform: translateX(-5%) translateY(450%);
+      background-image: url(imagenes/btn-bg1.png);
+      background-size: contain;
+   }
+
+   .contenedor .texto-carousel .fondo-robot{
+      width: 70%;
+      transform: translateY(-35%);
+   }
 }
