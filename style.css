@@ -827,6 +827,7 @@ footer .container .centro li{
 
    .contenedor .texto-carousel{
       flex-direction: column;
+      padding-top: 5%;
    }
 
    .contenedor .texto-carousel .contentBx{
