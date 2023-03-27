@@ -822,7 +822,6 @@ footer .container .centro li{
 
    .contenedor .texto-carousel{
       flex-direction: column;
-      justify-content: center;
    }
 
    .contenedor .texto-carousel .contentBx{
