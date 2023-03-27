@@ -834,7 +834,7 @@ footer .container .centro li{
    }
 
    .contenedor .texto-carousel .contentBx a{
-      transform: translateX(-5%) translateY(450%);
+      transform: translateX(-5%) translateY(50vh);
       background-image: url(imagenes/btn-bg1.png);
       background-size: contain;
    }
