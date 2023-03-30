@@ -1,45 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitacora | IA</title>
-    <link rel="icon" href="images/Innovation-pana.svg">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitacora | IA</title>
+  <link rel="icon" href="images/Innovation-pana.svg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!--Carrusel-->
+
+<!--Carrusel-->
   <section id="carrusel">
     <div class="contenedor">
       <div class="texto-carousel">
         <div class="contentBx">
-            <h2>Implementación de la inteligencia artificial para elaborar <span><span id="texto-codigo"></span></span></h2>
-            <p></p>
-            <a href="#tarjetas"><span>Leer más</span></a>
+          <h2>Implementación de la inteligencia artificial para elaborar <span><span id="texto-codigo"></span></span></h2>
+          <p></p>
+          <a href="#tarjetas"><span>Leer más</span></a>
         </div>
         <div class="fondo-robot">
           <img src="images/Innovation-pana.svg" alt="">
         </div>
       </div>
-        <div class="tabs">
-            <input id="web" type="radio" name="slider" checked="">
-            <input id="graphics" type="radio" name="slider">
-            <input id="photography" type="radio" name="slider">
-        
-            <div class="buttons">
-                <label for="web"></label>
-                <label for="graphics"></label>
-                <label for="photography"></label>
-            </div>
-            <div class="content-carousel">
-               
-            </div>
-        </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!--Tarjetas-->
+<!--Tarjetas-->
   <section id="tarjetas">
     <div class="container">
       <div class="card">
@@ -58,7 +44,7 @@
         <div class="box">
           <div class="content">
             <h2>02</h2>
-            <h3>Justificacion</h3>
+            <h3>Justificación</h3>
             <div class="imagenes">
               <img src="imagenes/justificacion.jpeg" alt="">
             </div>
@@ -94,14 +80,38 @@
         <div class="box">
           <div class="content">
             <h2>05</h2>
-            <h3>Bibliografia</h3>
+            <h3>Árbol de problemas</h3>
+            <div class="imagenes">
+              <img src="imagenes/arbol-problemas.png" alt="">
+            </div>
+            <a href="#segunda-seccion" onclick="toggle('arbol-problemas')">Read More </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <div class="content">
+            <h2>06</h2>
+            <h3>Árbol de soluciones u objetivos</h3>
+            <div class="imagenes">
+              <img src="imagenes/arbol-solucion.png" alt="">
+            </div>
+            <a href="#segunda-seccion" onclick="toggle('arbol-solucion')">Read More </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="box">
+          <div class="content">
+            <h2>07</h2>
+            <h3>Bibliografía</h3>
             <div class="imagenes">
               <img src="imagenes/bibliografia.jpeg" alt="">
             </div>
             <a href="#segunda-seccion" onclick="toggle('bibliografia')">Read More </a>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   </section>
 
@@ -136,64 +146,65 @@
     </div>
 
   <!--Justificacion-->
-      <div id = "justificacion" class="ventana">
-        <div class="ventana-interna">
-          <img src="images/close-icon.svg" onclick="toggle('justificacion')" class="close" alt="">
-          <div class="ventana-contenido">
-            <h2>Justificación</h2>
-            <img src="imagenes/justificacion.jpeg" alt="">
-            <p>Con los grandes avances que ha presentado la IA últimamente se han visto muy afectadas las 
-              profesiones enfocadas en la programación, debido al poco tiempo que necesita la IA para codificar 
-              en diferentes lenguajes de programación, con una cantidad mínima, casi nula de errores. Un claro 
-              ejemplo de esta situación, son las últimas noticias vistas en diferentes multinacionales relacionadas 
-              con la programación, donde se realizaron despidos masivos de desarrolladores, justificando que es 
-              una inversión por la Inteligencia Artificial, dónde ahora prefieren prescindir de la mano de obra 
-              humana para enfocar ese dinero en la evolución de la IA, pero en un futuro se verán los beneficios, 
-              tanto de efectividad cómo de costos, tal como lo afirma Chris Hohn y la decisión de Google presentada 
-              en el periódico Hipertextual "Indican que la decisión de Google de prescindir del 6 % de su plantilla 
-              ha estado condicionada en gran parte por las exigencias de sus inversores. Entre ellos, Chris Hohn, 
-              gestor de The Children Investment (TCI) quien afirmó que la compañía “tiene demasiados empleados y el 
-              coste por empleado es demasiado elevado” (Chicharro, 2023).
-              <br><br>
-              Por otra parte, en una noticia de Bloomberg se evidencia la carrera que se ha generado alrededor del 
-              desarrollo de la inteligencia artificial por parte de las grandes empresas tecnológicas como lo son 
-              Google, Amazon, Meta y Microsoft, quienes han hecho despidos masivos de talento humano para darle 
-              prioridad al desarrollo de la inteligencia artificial (Bergen et al, 2023), esto se puede relacionar 
-              con la ética teleológica del Hedonismo, que tiene como principio el subjetivismo moral, donde se tiene 
-              en cuenta el beneficio individual llevando al extremo de omitir lo social, en esta situación únicamente 
-              se benefician los dueños de las multinacionales antes mencionadas y se omiten a los empleados que gracias 
-              a esta decisión quedaron sin trabajo.
-              </p>
-            <a href="#segunda-seccion" onclick="toggle('justificacion')" >Close</a>
-          </div>
+    <div id = "justificacion" class="ventana">
+      <div class="ventana-interna">
+        <img src="images/close-icon.svg" onclick="toggle('justificacion')" class="close" alt="">
+        <div class="ventana-contenido">
+          <h2>Justificación</h2>
+          <img src="imagenes/justificacion.jpeg" alt="">
+          <p>Con los grandes avances que ha presentado la IA últimamente se han visto muy afectadas las 
+            profesiones enfocadas en la programación, debido al poco tiempo que necesita la IA para codificar 
+            en diferentes lenguajes de programación, con una cantidad mínima, casi nula de errores. Un claro 
+            ejemplo de esta situación, son las últimas noticias vistas en diferentes multinacionales relacionadas 
+            con la programación, donde se realizaron despidos masivos de desarrolladores, justificando que es 
+            una inversión por la Inteligencia Artificial, dónde ahora prefieren prescindir de la mano de obra 
+            humana para enfocar ese dinero en la evolución de la IA, pero en un futuro se verán los beneficios, 
+            tanto de efectividad cómo de costos, tal como lo afirma Chris Hohn y la decisión de Google presentada 
+            en el periódico Hipertextual "Indican que la decisión de Google de prescindir del 6 % de su plantilla 
+            ha estado condicionada en gran parte por las exigencias de sus inversores. Entre ellos, Chris Hohn, 
+            gestor de The Children Investment (TCI) quien afirmó que la compañía “tiene demasiados empleados y el 
+            coste por empleado es demasiado elevado” (Chicharro, 2023).
+            <br><br>
+            Por otra parte, en una noticia de Bloomberg se evidencia la carrera que se ha generado alrededor del 
+            desarrollo de la inteligencia artificial por parte de las grandes empresas tecnológicas como lo son 
+            Google, Amazon, Meta y Microsoft, quienes han hecho despidos masivos de talento humano para darle 
+            prioridad al desarrollo de la inteligencia artificial (Bergen et al, 2023), esto se puede relacionar 
+            con la ética teleológica del Hedonismo, que tiene como principio el subjetivismo moral, donde se tiene 
+            en cuenta el beneficio individual llevando al extremo de omitir lo social, en esta situación únicamente 
+            se benefician los dueños de las multinacionales antes mencionadas y se omiten a los empleados que gracias 
+            a esta decisión quedaron sin trabajo.
+            </p>
+          <a href="#segunda-seccion" onclick="toggle('justificacion')" >Close</a>
         </div>
       </div>
+    </div>
+      
   <!--Argumentos a favor-->
-      <div id = "argumentos-a-favor" class="ventana">
-        <div class="ventana-interna">
-          <img src="images/close-icon.svg" onclick="toggle('argumentos-a-favor')" class="close" alt="">
-          <div class="ventana-contenido">
-            <h2>Argumentos a favor</h2>
-            <img src="imagenes/argumentos-a-favor.jpeg" alt="">
-            <p><li>La Inteligencia Artificial aparte de ser un gran avance tecnológico puede verse como una herramienta 
-              que facilita diferentes tareas y profesiones, como es el caso de la programación, un explícito ejemplo 
-              que dio la revista “La República” es github, un repositorio de código en el cual se dan soluciones bien 
-              detalladas de algún trabajo en específico que se le pida a esta plataforma, y no solo en esta sino como 
-              dice Kevin Scott (2022) “otro sistema de IA que desarrolla código es Codex, que también creo OpenAL junto 
-              con Microsoft. Es una forma diferente de pensar el desarrollo de la que hemos tenido”</li>
-              <br><br>
-              <li>Una de las preocupaciones constantes de los empleados y estudiantes de las carreras relacionadas con 
-              la programación radica en la posibilidad de su reemplazo por la Inteligencia Artificial, el CEO de Platzi, 
-              Freddy Vega (2022), responde a esta duda así “No significa que la programación vaya a terminar, lo que 
-              le va a pasar a esta industria es que se va a transformar como le ha pasado a otras ”, según esto la 
-              implementación de la IA en el ámbito de la codificación va a generar un cambio, donde esta nueva 
-              tecnología podrá realizar los programas sencillos y así el desarrollador podrá enfocarse en los que son 
-              más complejos, alivianando su carga laboral.</li>
-              </p>
-            <a href="#segunda-seccion" onclick="toggle('argumentos-a-favor')" >Close</a>
-          </div>
+    <div id = "argumentos-a-favor" class="ventana">
+      <div class="ventana-interna">
+        <img src="images/close-icon.svg" onclick="toggle('argumentos-a-favor')" class="close" alt="">
+        <div class="ventana-contenido">
+          <h2>Argumentos a favor</h2>
+          <img src="imagenes/argumentos-a-favor.jpeg" alt="">
+          <p><li>La Inteligencia Artificial aparte de ser un gran avance tecnológico puede verse como una herramienta 
+            que facilita diferentes tareas y profesiones, como es el caso de la programación, un explícito ejemplo 
+            que dio la revista “La República” es github, un repositorio de código en el cual se dan soluciones bien 
+            detalladas de algún trabajo en específico que se le pida a esta plataforma, y no solo en esta sino como 
+            dice Kevin Scott (2022) “otro sistema de IA que desarrolla código es Codex, que también creo OpenAL junto 
+            con Microsoft. Es una forma diferente de pensar el desarrollo de la que hemos tenido”</li>
+            <br><br>
+            <li>Una de las preocupaciones constantes de los empleados y estudiantes de las carreras relacionadas con 
+            la programación radica en la posibilidad de su reemplazo por la Inteligencia Artificial, el CEO de Platzi, 
+            Freddy Vega (2022), responde a esta duda así “No significa que la programación vaya a terminar, lo que 
+            le va a pasar a esta industria es que se va a transformar como le ha pasado a otras ”, según esto la 
+            implementación de la IA en el ámbito de la codificación va a generar un cambio, donde esta nueva 
+            tecnología podrá realizar los programas sencillos y así el desarrollador podrá enfocarse en los que son 
+            más complejos, alivianando su carga laboral.</li>
+            </p>
+          <a href="#segunda-seccion" onclick="toggle('argumentos-a-favor')" >Close</a>
         </div>
       </div>
+    </div>
 
   <!--Argumentos en contra-->
     <div id = "argumentos-en-contra" class="ventana">
@@ -225,59 +236,85 @@
         </div>
       </div>
     </div>
-  <!--Bibliografia-->
-      <div id = "bibliografia" class="ventana">
-        <div class="ventana-interna">
-          <img src="images/close-icon.svg" onclick="toggle('bibliografia')" class="close" alt="">
-          <div class="ventana-contenido enlaces">
-            <h2>Bibliografia</h2>
-            <img src="imagenes/bibliografia.jpeg" alt="">
-            <p>Abudinen, K. (2020). Colombia podría alcanzar un déficit de 112.000 programadores en 2025. Elempleo. 
-              https://www.elempleo.com/co/noticias/noticias-laborales/colombia-podria-alcanzar-un-deficit-de-112000-programadores-en-2025-6209
-              <br><br>Chicharro, R. (2023). Ni Google se libra de los despidos: prescindirá de 12.000 personas. Hipertextual. 
-              https://hipertextual.com/2023/01/ni-google-se-libra-de-los-despidos-prescindiran-de-12-000-personas
-              <br><br>Duitama, K. P. (2022). Las herramientas de Inteligencia Artificial que facilitan programar y desarrollar
-              código. La republica. https://www.larepublica.co/internet-economy/las-herramientas-de-inteligencia-artificial-que-facilitan-programar-y-desarrollar-codigo-3487686
-              <br><br>Mark Bergen, J. L. A. D. A. (2023). Google eliminará 12,000 empleos en una reducción del 6% de la fuerza 
-              laboral global. Bloomberg. https://www.bloomberg.com/news/articles/2023-01-20/google-cutting-12-000-jobs-in-6-slash-to-global-workforce?sref=4OaaL8PX
-              <br><br>Mingxing Tan, Software Engineer, Google Brain Team. (2018). MnasNet: Towards Automating the Design of 
-              Mobile Machine Learning Models. Google Research. https://ai.googleblog.com/2018/08/mnasnet-towards-automating-design-of.html
-              <br><br>Reyes, E. (2018). ¿Hay suficientes especialistas en inteligencia artificial? Al parecer no. Expansión. 
-              https://expansion.mx/tecnologia/2018/10/10/hay-suficientes-especialistas-en-inteligencia-artificial-n
-              <br><br>freepik. (2010). Free Vectors, Stock Photos. https://www.freepik.com/
-              </p>
-            <a href="#segunda-seccion" onclick="toggle('bibliografia')" >Close</a>
-          </div>
+
+  <!--Arbol de problemas-->
+    <div id = "arbol-problemas" class="ventana">
+      <div class="ventana-interna">
+        <img src="images/close-icon.svg" onclick="toggle('arbol-problemas')" class="close" alt="">
+        <div class="ventana-contenido">
+          <h2>Árbol de problemas</h2>
+          <img src="imagenes/arbol-problemas.png" alt="">
+          <a href="#segunda-seccion" onclick="toggle('arbol-problemas')">Close</a>
         </div>
       </div>
+    </div>
+
+  <!--Arbol de soluciones u objetivos-->
+    <div id = "arbol-solucion" class="ventana">
+      <div class="ventana-interna">
+        <img src="images/close-icon.svg" onclick="toggle('arbol-solucion')" class="close" alt="">
+        <div class="ventana-contenido">
+          <h2>Árbol de soluciones u objetivos</h2>
+          <img src="imagenes/arbol-solucion.png" alt="">
+          <a href="#segunda-seccion" onclick="toggle('arbol-solucion')">Close</a>
+        </div>
+      </div>
+    </div>
+
+  <!--Bibliografia-->
+    <div id = "bibliografia" class="ventana">
+      <div class="ventana-interna">
+        <img src="images/close-icon.svg" onclick="toggle('bibliografia')" class="close" alt="">
+        <div class="ventana-contenido enlaces">
+          <h2>Bibliografía</h2>
+          <img src="imagenes/bibliografia.jpeg" alt="">
+          <p>Abudinen, K. (2020). Colombia podría alcanzar un déficit de 112.000 programadores en 2025. Elempleo. 
+            https://www.elempleo.com/co/noticias/noticias-laborales/colombia-podria-alcanzar-un-deficit-de-112000-programadores-en-2025-6209
+            <br><br>Chicharro, R. (2023). Ni Google se libra de los despidos: prescindirá de 12.000 personas. Hipertextual. 
+            https://hipertextual.com/2023/01/ni-google-se-libra-de-los-despidos-prescindiran-de-12-000-personas
+            <br><br>Duitama, K. P. (2022). Las herramientas de Inteligencia Artificial que facilitan programar y desarrollar
+            código. La republica. https://www.larepublica.co/internet-economy/las-herramientas-de-inteligencia-artificial-que-facilitan-programar-y-desarrollar-codigo-3487686
+            <br><br>Mark Bergen, J. L. A. D. A. (2023). Google eliminará 12,000 empleos en una reducción del 6% de la fuerza 
+            laboral global. Bloomberg. https://www.bloomberg.com/news/articles/2023-01-20/google-cutting-12-000-jobs-in-6-slash-to-global-workforce?sref=4OaaL8PX
+            <br><br>Mingxing Tan, Software Engineer, Google Brain Team. (2018). MnasNet: Towards Automating the Design of 
+            Mobile Machine Learning Models. Google Research. https://ai.googleblog.com/2018/08/mnasnet-towards-automating-design-of.html
+            <br><br>Reyes, E. (2018). ¿Hay suficientes especialistas en inteligencia artificial? Al parecer no. Expansión. 
+            https://expansion.mx/tecnologia/2018/10/10/hay-suficientes-especialistas-en-inteligencia-artificial-n
+            <br><br>freepik. (2010). Free Vectors, Stock Photos. https://www.freepik.com/
+            </p>
+          <a href="#segunda-seccion" onclick="toggle('bibliografia')" >Close</a>
+        </div>
+      </div>
+    </div>
+
   <!--Footer-->
-      <footer>
-        <div class="waves" id="footer">
-          <div class="wave" id="wave1"></div>
-          <div class="wave" id="wave2"></div>
-          <div class="wave" id="wave3"></div>
-          <div class="wave" id="wave4"></div>
+    <footer>
+      <div class="waves" id="footer">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <div class="container">
+        <div id="autores" class="txtFooter">
+          <h4>Autores</h4>
+          <li>David Arias Rueda</li>
+          <li>Paula Andrea Gómez Aldana</li>
+          <li>Juan Sebastián Ramírez Rojas</li>
         </div>
-        <div class="container">
-          <div id="autores" class="txtFooter">
-            <h4>Autores</h4>
-            <li>David Arias Rueda</li>
-            <li>Paula Andrea Gomez Aldana</li>
-            <li>Juan Sebastian Ramirez Rojas</li>
+        <div id="logo" class="centro">
+          <div class="imgLogo">
+            <img src="imagenes/logo-IA.png" alt="">
           </div>
-          <div id="logo" class="centro">
-            <div class="imgLogo">
-              <img src="imagenes/logo-IA.png" alt="">
-            </div>
-            <li><b><i>Ingenieria de sistemas</i></b></li>
-          </div>
-          <div id="materia" class="txtFooter">
-            <li>Ética y ciudadania</li>
-            <li><br>Diana Carolina Piraquive Monroy</li>
-          </div>
+          <li><b><i>Ingenieria de sistemas</i></b></li>
         </div>
-        
-      </footer>
+        <div id="materia" class="txtFooter">
+          <li>Ética y ciudadania</li>
+          <li><br>Diana Carolina Piraquive Monroy</li>
+        </div>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
     <script>

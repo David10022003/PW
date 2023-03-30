@@ -618,7 +618,7 @@ section{
    color: #111;
    font-size: 4em;
    font-family: 'Inter Display';
-   word-break: break-all; 
+   word-break: keep-all; 
 }
 
 .ventana-interna .ventana-contenido img{
@@ -702,7 +702,6 @@ footer{
    align-items: center;
    vertical-align: middle;
    padding-bottom: 25px;
-   margin-top: 90px;
 }
 footer .wave{
    position: absolute;
@@ -718,24 +717,28 @@ footer .wave#wave1{
    opacity: 1;
    bottom: 0;
    animation: animateWave 4s linear infinite;
+   margin-top: 60px;
 }
 footer .wave#wave2{
    z-index: 999;
    opacity: 0.5;
    bottom: 10px;
    animation: animateWave_02 4s linear infinite;
+   margin-top: 60px;
 }
 footer .wave#wave3{
    z-index: 1000;
    opacity: 0.2;
    bottom: 15px;
    animation: animateWave 3s linear infinite;
+   margin-top: 60px;
 }
 footer .wave#wave4{
    z-index: 999;
    opacity: 0.7;
    bottom: 20px;
    animation: animateWave_02 3s linear infinite;
+   margin-top: 60px;
 }
 @keyframes animateWave {
    0%{
@@ -756,7 +759,6 @@ footer .wave#wave4{
 footer .container{
    display: flex;
    justify-content: space-around;
-   align-items: end;
    flex-wrap: wrap;
    flex-direction: row;
    width: 100%;
@@ -771,7 +773,6 @@ footer .container .txtFooter{
    width: 30%;
 }
 footer .container .txtFooter h4{
-   font-family: 'Inter Display', sans-serif;
    font-size: 1.8em;
 }
 footer .container .txtFooter li{
@@ -795,8 +796,6 @@ footer .container .centro .imgLogo img{
    width: 100%;
 }
 footer .container .centro li{
-   font-family: 'Inter Display', sans-serif;
-   text-align: center;
    list-style: none;
    font-size: 1.5em;
 }
@@ -812,16 +811,6 @@ footer .container .centro li{
       background-image: url(imagenes/btn-bg1.png);
       background-size: contain;
       color: #fff;
-   }
-
-   footer .container{
-      align-items: center;
-
-   }
-
-   footer .container h4,
-   footer .container li{
-      width: 100%;
    }
 }
 
