@@ -198,6 +198,17 @@ section{
    overflow: hidden;
 }
 
+.contenedor .layer{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   opacity: 0.3;
+   z-index: 1;
+}
+
 .contenedor .texto-carousel{
       position: absolute;
       width: 100%;
@@ -219,15 +230,16 @@ section{
 }
 
 .contenedor .texto-carousel .fondo-robot{
-   /*position: absolute;*/
    background-image: url(imagenes/colors.png);
-   width: 40%;
-   background-size: cover;
-   /*min-height: 100vh;*/
-   /*transform: translateX(150%);*/
+
+   width: 50%;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
  }
 
 .contenedor .texto-carousel .fondo-robot img{
+   width: 80%;
    animation: animateRobot 4s ease-in-out infinite;
  }
 
@@ -441,7 +453,28 @@ section{
 }
 
 
-/* Tarjetas*/  
+/* Tarjetas*/ 
+
+#tarjetas .titulo{
+   width: 90%;
+   margin: auto;
+   height: max-content;
+   text-align: center;
+}
+
+#tarjetas .titulo h2{
+   font-size: 2.5rem;
+   margin-top: 5rem;
+   text-transform: uppercase;
+   color: #212529;
+} 
+
+#tarjetas .titulo hr{
+   border: 0;
+   width: 80%;
+   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .container
 {
    margin: 20px;
@@ -449,7 +482,7 @@ section{
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   padding: 40px 0;
+   padding: 0 0 40px 0;
 }
 .container .card
 {
@@ -757,6 +790,7 @@ footer .wave#wave4{
 footer .container{
    display: flex;
    justify-content: space-around;
+   align-items: end;
    flex-wrap: wrap;
    flex-direction: row;
    width: 100%;
@@ -770,17 +804,21 @@ footer .container .txtFooter{
    flex-direction: column;
    width: 30%;
 }
+
 footer .container .txtFooter h4{
    font-size: 1.8em;
 }
 footer .container .txtFooter li{
    list-style: none;
+   text-align: center;
    font-size: 1.2em;
+   
 }
 footer .container .centro{
    position: relative;
    display: flex;
    width: 30%;
+   height: 100%;
    align-items: center;
    vertical-align: middle;
    flex-direction: column;
@@ -795,6 +833,7 @@ footer .container .centro .imgLogo img{
 }
 footer .container .centro li{
    list-style: none;
+   text-align: center;
    font-size: 1.5em;
 }
 
