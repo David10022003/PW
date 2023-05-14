@@ -33,9 +33,10 @@ function abrir(clase){
     const nextBtn = ventana.querySelector('.next-btn');
     let currentImageIndex = 0;
 
-    //Eliminar clase active
+    //Eliminar clase active y ampliada
     images.forEach((image) =>{
         image.classList.remove('active');
+        image.classList.remove('ampliada');
     });
 
     // Mostrar la primera imagen al cargar la página
@@ -43,6 +44,10 @@ function abrir(clase){
 
     // Función para cambiar de imagen
     function changeImage(index) {
+    //Eliminar la clase ampliada
+    images.forEach((image) =>{
+        image.classList.remove('ampliada');
+    });
     // Ocultar imagen actual
     images[currentImageIndex].classList.remove('active');
     // Actualizar índice de imagen actual
@@ -68,7 +73,6 @@ function abrir(clase){
 /*Ampliar imagen*/
 
 function ampliar(ventana){
-
     var carrusel = ventana.querySelector('.active')
     carrusel.classList.toggle('ampliada');
 }

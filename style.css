@@ -831,18 +831,17 @@ section{
 	position: fixed;
 	visibility: hidden;
 	display: flex;
-	margin: auto;
+	top: 0;
 	justify-content: center;
 	align-items: center;
-	left: -100vh;
-	width: 50%;
-	height: 50vh;
+	left: -100%;
+	width: 100%;
+	height: 100vh;
 	backdrop-filter: blur(20px);
-	transition: 0.8s;
+	transition: 1s;
   }
   
   .ventana-inf.active{
-	top: 0;
 	left: 0;
 	visibility: visible;
 	width: 100%;
@@ -975,12 +974,12 @@ footer{
    min-height: 100px;
    align-items: center;
    vertical-align: middle;
-   padding-bottom: 25px;
+
    margin-top: 100px;
 }
 footer .wave{
    position: absolute;
-   top: -100px;
+   top: -90px;
    left: 0;
    width: 100%;
    height: 100px;
@@ -1034,6 +1033,7 @@ footer .container{
    align-items: end;
    flex-wrap: wrap;
    flex-direction: row;
+   padding: 0;
    width: 100%;
    height: 100%;
    margin: 0 0;
@@ -1078,6 +1078,31 @@ footer .container .centro li{
    font-size: 1.5em;
 }
 
+footer .container .copyright{
+   width: calc(100% - 80px);
+   display: flex;
+   padding: 40px;
+   align-items: center;
+   justify-content: center;
+}
+
+footer .container .copyright p{
+   text-align: center;
+   font-size: 1.1em;
+   font-style: italic;
+   font-weight: 300;
+}
+
+footer .container .copyright .name{
+   display: flex;
+}
+
+footer .container .copyright .nombre{
+   font-style: normal;
+   font-weight: 500;
+}
+
+
 
 @media screen and (max-width: 991px) {
    .contenedor .texto-carousel .contentBx h2{
@@ -1095,6 +1120,23 @@ footer .container .centro li{
       width: 100%;
       height: 300px;
       margin: 20px;
+   }
+
+   footer .container .copyright{
+      flex-direction: column;
+   }
+
+   footer .container{
+      flex-direction: column;
+      align-items: center;
+   }
+
+   footer .container .txtFooter{
+      width: 100%;
+   }
+
+   footer .container .centro{
+      width: 60%;
    }
 }
 
@@ -1136,6 +1178,15 @@ footer .container .centro li{
       width: 100%;
       height: 100px;
       margin: 20px;
+   }
+
+   .carousel img.ampliada{
+      top: 0;
+      transform: none;
+   }
+
+   footer .container .centro{
+      width: 100%;
    }
 }
 
