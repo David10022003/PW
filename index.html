@@ -321,6 +321,76 @@
         </div>
       </div>
     </div>
+  
+  <!--Entrega de la actividad-->
+    <div id = "entrega-actividad" class="ventana">
+      <div class="ventana-interna">
+        <img src="images/close-icon.svg" onclick="toggle('entrega-actividad')" class="close" alt="">
+        <div class="ventana-contenido">
+          <h2>Planeación de la actividad</h2>
+          <section id="infografias">
+            <div class="box" style="--i:3;" onclick="abrir('como-usar')">
+              <div class="imgBx">
+                <img src="imagenes/como-usar-github-copilot.gif">					
+              </div>
+              <div class="content">
+                <h2>Como usar</h2>
+              </div>
+            </div>
+            <div class="box" style="--i:4;" onclick="abrir('ventajas-desventajas')">
+              <div class="imgBx">
+                <img src="imagenes/ventajas-desventajas-github-copilot.gif">
+              </div>
+              <div class="content">
+                <h2>Ventajas y desventajas</h2>
+              </div>
+            </div>
+            <div class="box" style="--i:4;" onclick="abrir('limitaciones')">
+              <div class="imgBx">
+                <img src="imagenes/Limitaciones-de-GitHub-Copilot.png">
+              </div>
+              <div class="content">
+                <h2>Limitaciones de Github</h2>
+              </div>
+            </div>    
+          </section>
+          <a href="#segunda-seccion" onclick="toggle('entrega-actividad')">Close</a>
+        </div>
+      </div>
+      <div class="ventana-inf" id="como-usar">
+        <div class="ventana-interna-inf">
+          <button class="close-info" onclick="abrir('como-usar')"><ion-icon name="close-outline"></ion-icon></button>
+          <button class="prev-btn"><ion-icon name="arrow-back-outline"></ion-icon></button>
+          <button class="next-btn"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+          <div class="carousel" onclick="ampliar(this)">
+            <img src="imagenes/como-usar-parte1.png" alt="Imagen 1">
+            <img src="imagenes/como-usar-parte2.png" alt="Imagen 2">
+          </div>
+        </div> 
+      </div>      
+      <div class="ventana-inf" id="ventajas-desventajas">
+        <div class="ventana-interna-inf">
+          <button class="close-info" onclick="abrir('ventajas-desventajas')"><ion-icon name="close-outline"></ion-icon></button>
+          <button class="prev-btn"><ion-icon name="arrow-back-outline"></ion-icon></button>
+          <button class="next-btn"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+          <div class="carousel" onclick="ampliar(this)">
+            <img src="imagenes/ventajas-desventajas-parte1.png" alt="Imagen 1">
+            <img src="imagenes/ventajas-desventajas-parte2.png" alt="Imagen 2">
+          </div>
+        </div> 
+      </div>   
+      <div class="ventana-inf" id="limitaciones">
+        <div class="ventana-interna-inf">
+          <button class="close-info" onclick="abrir('limitaciones')"><ion-icon name="close-outline"></ion-icon></button>
+          <button class="prev-btn"><ion-icon name="arrow-back-outline"></ion-icon></button>
+          <button class="next-btn"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+          <div class="carousel" onclick="ampliar(this)">
+            <img src="imagenes/Limitaciones-de-GitHub-Copilot.png" alt="Imagen 1">
+            <img src="imagenes/Limitaciones-de-GitHub-Copilot.png" alt="Imagen 2">
+          </div>
+        </div> 
+      </div>  
+    </div>
 
   <!--Bibliografia-->
     <div id = "bibliografia" class="ventana">
