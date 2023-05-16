@@ -1125,6 +1125,10 @@ footer .container .copyright .nombre{
    footer .container .copyright{
       flex-direction: column;
    }
+	
+   footer .container .copyright p{
+       margin: 0;
+   }
 
    footer .container{
       flex-direction: column;
